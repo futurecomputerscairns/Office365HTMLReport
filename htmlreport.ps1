@@ -3,7 +3,8 @@
 #            VARIABLES                  #
 #                                       #
 #########################################
-
+param([string]$inp_O365Admin
+	  [string]$inp_O365AdminPass)
 #Company logo that will be displayed on the left, can be URL or UNC
 $CompanyLogo = "https://irp-cdn.multiscreensite.com/6c87c673/dms3rep/multi/mobile/Future%202016%20Logo-533x133.png"
 
@@ -886,5 +887,5 @@ $rpt += Get-HTMLClosePage
 $Day = (Get-Date).Day
 $Month = (Get-Date).Month
 $Year = (Get-Date).Year
-$ReportName = ("$Day" + "-" + "$Month" + "-" + "$Year" + "-" + "O365 Tenant Report")
-Save-HTMLReport -ReportContent $rpt -ShowReport -ReportName $ReportName -ReportPath $ReportSavePath
+$ReportName = ("$CompanyName" + "-" + "$Day" + "-" + "$Month" + "-" + "$Year" + "-" + "O365 Tenant Report")
+Save-HTMLReport -ReportContent $rpt -ReportName $ReportName -ReportPath $ReportSavePath
