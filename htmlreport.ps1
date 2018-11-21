@@ -3,8 +3,6 @@
 #            VARIABLES                  #
 #                                       #
 #########################################
-param([string]$inp_O365Admin
-	  [string]$inp_O365AdminPass)
 #Company logo that will be displayed on the left, can be URL or UNC
 $CompanyLogo = "https://irp-cdn.multiscreensite.com/6c87c673/dms3rep/multi/mobile/Future%202016%20Logo-533x133.png"
 
